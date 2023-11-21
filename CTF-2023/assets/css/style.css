@@ -1,0 +1,44 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+}
+.banner_section {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+}
+
+
+@keyframes blink {
+  0%, 50%, 100% {
+      opacity: 1;
+  }
+  25%, 75% {
+      opacity: 0.3;
+  }
+}
+
+.glow-blink {
+  animation: glow 1.5s ease-in-out infinite, blink 1s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+      filter: drop-shadow(0 0 10px #f00) brightness(1.2);
+  }
+  50% {
+      filter: drop-shadow(0 0 20px 10px #f00) brightness(1.5);
+  }
+  100% {
+      filter: drop-shadow(0 0 10px #f00) brightness(1.2);
+  }
+}
